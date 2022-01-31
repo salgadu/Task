@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { List } from 'react-native-paper';
-import { firestore, auth } from '../firebase';
+import { firestore, auth } from '../utils/firebase';
 import { Modal, Alert, StyleSheet, View, Text, Pressable, TextInput, TouchableOpacity } from 'react-native';
 import { useState } from "react";
 

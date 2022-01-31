@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
 import { ImageBackground, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { auth } from '../firebase'
+import { auth } from '../utils/firebase'
 import { Styles } from '../components/Styles';
 
 import AppLoading from 'expo-app-loading';
@@ -44,12 +44,12 @@ const LoginScreen = () => {
   return (
       <View style={{ flex: 1 }}>
          <ImageBackground
-        source={require('../assets/login.png')}
+        source={require('../../assets/login.png')}
         style={{width: '100%', height: '100%'}}
       >
       <SafeAreaView style={Styles.safeview}>
      
-        <Text style={[Styles.pageTitle, styles.logoText ]}>T</Text>
+        <Text style={styles.logoText}>T</Text>
         <View style={{ flex: 1 }} />
         <TextInput
           placeholder="Email"
@@ -70,7 +70,7 @@ const LoginScreen = () => {
         </TouchableOpacity>
 
         <View style={styles.justCad}>
-        <Text>NÃO POSSUI CONTA?</Text>
+        <Text style={{color: 'white'}}>NÃO POSSUI CONTA?</Text>
         <TouchableOpacity onPress={() => navigation.navigate('Register')}>
           <Text style={{color: "#5C9DFE", }}> CADASTRE-SE</Text>
         </TouchableOpacity> 
@@ -108,8 +108,8 @@ const styles = StyleSheet.create({
   },
   logoText: {
     color: 'white',
-    marginTop: 50, 
-    marginHorizontal: 100,
+    marginTop: 30,
+    marginLeft: 120, 
     fontFamily: 'RockSalt_400Regular', 
     fontSize: 120,
     alignItems: 'center',

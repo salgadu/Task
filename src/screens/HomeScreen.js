@@ -2,7 +2,7 @@
 import React from 'react';
 import { TouchableOpacity, FlatList, Alert, View, Text, TextInput, StyleSheet } from 'react-native';
 import { useState, useEffect } from 'react';
-import { firestore, auth } from '../firebase'
+import { firestore, auth } from '../utils/firebase'
 import { Avatar, IconButton} from 'react-native-paper';
 import Todo from '../components/Todo';
 import { useNavigation } from '@react-navigation/native';
@@ -71,7 +71,7 @@ const HomeScreen = () => {
   return (  
     <View style={Styles.safeview}>  
       <View style={styles.labelView3}>
-      <Avatar.Image marginLeft={15} size={24} source={require('../assets/profile.jpg')} />
+      <Avatar.Image marginLeft={15} size={24} source={require('../../assets/profile.jpg')} />
       <Text style={styles.buttonOutlineText2}> TAREFAS </Text>
       <IconButton
         icon="logout"
@@ -116,7 +116,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#BED8FF',
     width: '100%',
     marginTop: 25,
-
     borderRadius: 6,
     flexDirection: 'row', 
     alignItems: 'center',
